@@ -1,6 +1,6 @@
 "============================================================
 " Create Time:			2020-01-25 16:50:54
-" Last modify:			2020-01-26 15:20:48
+" Last modify:			2020-01-26 19:10:34
 " Writer:				Wenhao	1795902848@qq.com
 " File Name:			display.vim
 " File Type:			VIM Source File
@@ -40,7 +40,7 @@ function! utils#display#showInfoByPreviewWindow(translation)
 	setlocal nobuflisted noswapfile nocursorline
 	setlocal filetype=translator
 	noautocmd wincmd p
-	"echo ''
+	echo ''
 endfunction
 
 function! utils#display#closePreviewWindow()
