@@ -1,6 +1,6 @@
 "============================================================
 " Create Time:			2020-01-25 12:45:20
-" Last modify:			2020-01-26 13:02:13
+" Last modify:			2020-01-27 01:18:46
 " Writer:				Wenhao	1795902848@qq.com
 " File Name:			translator.vim
 " File Type:			VIM Source File
@@ -24,8 +24,8 @@ endfunction
 
 nnoremap <plug>=Translate :call translator#main
 
-nmap \t <plug>=Translate('en', 'word')<CR>
-nmap \T <plug>=Translate('ch', 'word')<CR>
+nmap -t <plug>=Translate('en', 'word')<CR>
+nmap -T <plug>=Translate('ch', 'word')<CR>
 
-nmap \|t <plug>=Translate('en', 'text')<CR>
-nmap \|T <plug>=Translate('ch', 'text')<CR>
+nmap _t <plug>=Translate('en', 'text')<CR>
+nmap _T <plug>=Translate('ch', 'text')<CR>

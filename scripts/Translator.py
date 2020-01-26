@@ -12,9 +12,10 @@ import requests, json
 from lxml import etree
 
 class Translator:
-    def IcibaEn2Ch(this, word):
+    def IcibaEn2Ch(this, content):
         """爱词霸翻译，英文单词翻译中文"""
-        url = "http://www.iciba.com/%s"%word
+        content = '%20'.join(content.split())
+        url = "http://www.iciba.com/%s"%content
         headers = {
                 'Host': 'www.iciba.com',
                 'Referer': 'http://www.iciba.com/years',
@@ -65,6 +66,8 @@ class Translator:
     def translate(this, content, type):
         tf = this.translateInterface[type]
         translation = tf(content)
+        if translation == None:
+            translation = ""
         return translation
 
 def _argparse():

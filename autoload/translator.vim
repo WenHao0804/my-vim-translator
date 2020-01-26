@@ -1,6 +1,6 @@
 "============================================================
 " Create Time:			2020-01-25 16:47:44
-" Last modify:			2020-01-26 15:13:37
+" Last modify:			2020-01-27 00:28:27
 " Writer:				Wenhao	1795902848@qq.com
 " File Name:			translator.vim
 " File Type:			VIM Source File
@@ -41,11 +41,11 @@ function! translator#Translate(content, lang)
 	"@arg: english: English str to be translated into Chinese.
 	"@rtn: None
 	let type = {'en':'en2ch', 'ch':'ch2en'}[a:lang]
-	let cmd = printf('%s %s
-				\ --content=%s
+	let cmd = printf("%s %s
+				\ --content=\"%s\"
 				\ --type=%s
 				\ --engine=%s
-				\', s:translator_py_host, s:pyfilePath, a:content,
+				\", s:translator_py_host, s:pyfilePath, a:content,
 				\type, s:engine)
 	let Out_cb = function('utils#display#displayCB')
 	let Err_cb = function('utils#display#showMsg', ['Error happened when translating', 'error'])

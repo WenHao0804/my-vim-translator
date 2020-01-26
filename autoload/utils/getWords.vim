@@ -1,6 +1,6 @@
 "============================================================
 " Create Time:			2020-01-25 16:19:14
-" Last modify:			2020-01-26 01:59:36
+" Last modify:			2020-01-26 23:59:24
 " Writer:				Wenhao	1795902848@qq.com
 " File Name:			getWords.vim
 " File Type:			VIM Source File
@@ -55,9 +55,11 @@ function! utils#getWords#getHighlightedWords()
 	"@createTime: 2020-01-25 16:33:25
 	"@rtn: The last time highlighted words.
 	let reg_tmp = @x
-	ks "Save current cursor position
+	"Save current cursor position
+	normal ms
 	normal gv"xy
-	g`s "Go back to cursor position
+	"Go back to cursor position
+	normal g`s
 	let words = @x
 	let @x = reg_tmp "Restore what was in @x
 	unlet reg_tmp
