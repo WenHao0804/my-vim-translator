@@ -1,6 +1,6 @@
 "============================================================
 " Create Time:			2020-01-25 16:50:54
-" Last modify:			2020-01-26 19:10:34
+" Last modify:			2020-01-27 12:57:46
 " Writer:				Wenhao	1795902848@qq.com
 " File Name:			display.vim
 " File Type:			VIM Source File
@@ -23,6 +23,7 @@ function! utils#display#showInfoByPreviewWindow(translation)
 		enew!
 	endtry
 
+	normal ggdG
 	for line in reverse(a:translation)
 		call append(0, line)
 	endfor

@@ -26,11 +26,11 @@ For vim-plug users:
 Plug 'WenHao0804/my-vim-translator'
 ```
 ## Usage
-|shortcut | function|
-|__|__|
-|`-t`     |  En2Ch  |
-|`-T`     |  Ch2En  |
-|`_t`     |  En2Ch(visual)  |
-|`_T`     |  Ch2En(visual)  |
+shortcut |  function
+:-:      |  :-:
+`-t`     |  En2Ch
+`-T`     |  Ch2En
+`_t`     |  En2Ch(visual)
+`_T`     |  Ch2En(visual)
 
 vim:tw=78:ts=4:ft=markdown:norl
